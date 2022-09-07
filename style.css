@@ -1,0 +1,108 @@
+html, body{
+    background-color: #6E6E6E;
+}
+
+.bar{
+  background-color: #BCFD4C;
+  position: fixed;
+  text-align: center;
+  width: 99%;
+  z-index: 1000;
+  
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    background: #BCFD4C;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+
+nav a{
+    color: #6E6E6E;
+    text-decoration: none;
+    text-transform: uppercase;
+    bottom: 30px;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+    color: rgb(196, 165, 9);
+}
+
+.toggle:checked ~ nav{
+    transform: scale(1,1);
+
+}
+.toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 150ms ease-in-out 250ms;
+}
+
+.toggle{
+    display: none;
+    
+}
+
+.toggle-label{
+    position: absolute;
+    margin-left: 0.5em;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #6E6E6E;
+}
+
+.name{
+    text-align: center;
+}
+
+h1{
+    color: #6E6E6E;
+}
+
+.toggle-label span,
+.toggle-label span::before,
+.toggle-label span::after{
+    display: block;
+    background: #6E6E6E;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.toggle-label span::before,
+.toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.toggle-label span::before{
+    bottom: 7px;
+}
+
+.toggle-label span::after{
+    top: 7px;
+}
