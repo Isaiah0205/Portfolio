@@ -6,22 +6,55 @@
     <title>Isaiah James</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="images/initial logo.png" />
+    <script type = "text/javascript">
+      function displayNextImage() {
+          x = (x === images.length - 1) ? 0 : x + 1;
+          document.getElementById("img").src = images[x];
+      }
+
+      function displayPreviousImage() {
+          x = (x <= 0) ? images.length - 1 : x - 1;
+          document.getElementById("img").src = images[x];
+      }
+
+      function startTimer() {
+          setInterval(displayNextImage, 2000);
+      }
+
+      var images = [], x = -1;
+      images[0] = "images/HTML_logo.jpg";
+      images[1] = "images/css_logo.png";
+      images[2] = "images/Python_logo_icon.png"
+  </script>
   </head>
-  <body>
+  <body onload = "startTimer()">
+    <div class="first">
+      <h1 class="about_me"><a name="aboutme">About me</a></h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    <div class="second">
+      <h1 class="skills"><a name="myskills">My Skills</a></h1>
+      <img id="img" src="images/Python_logo_icon.png"/>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    <div class="third">
+      <h1 class="projects"><a name="myprojects">My Projects</a></h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
     <div class="bar">
-        <h1 class="name">Placeholder</h1>
+        <h1 class="name">Fullstack Developer</h1>
         <input type="checkbox" id="toggle" class="toggle">
         <nav>
             <ul>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">My skills</a></li>
-                <li><a href="#">My projects</a></li>
+                <li><a href="aboutme">About me</a></li>
+                <li><a href="myskills">My skills</a></li>
+                <li><a href="myprojects">My projects</a></li>
+                <li><a href="#">Resume</a></li>
             </ul>
         </nav>
         <label for="toggle" class="toggle-label">
             <span></span>
         </label>
     </div>
-    <div></div>
   </body>
 </html>
