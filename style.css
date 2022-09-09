@@ -11,7 +11,7 @@ html, body{
   
 }
 
-nav{
+.old_bar{
     position: absolute;
     text-align: left;
     top: 100%;
@@ -25,18 +25,18 @@ nav{
     
 }
 
-nav ul{
+.old_bar ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav li{
+.old_bar li{
     margin-bottom: 0.5em;
     margin-left: 0.5em;
 }
 
-nav a{
+.old_bar a{
     color: #6E6E6E;
     text-decoration: none;
     text-transform: uppercase;
@@ -45,15 +45,15 @@ nav a{
     transition: opacity 150ms ease-in-out;
 }
 
-nav a:hover{
+.old_bar a:hover{
     color: rgb(196, 165, 9);
 }
 
-.toggle:checked ~ nav{
+.toggle:checked ~ .old_bar{
     transform: scale(1,1);
 
 }
-.toggle:checked ~ nav a{
+.toggle:checked ~ .old_bar a{
     opacity: 1;
     transition: opacity 150ms ease-in-out 250ms;
 }
@@ -74,15 +74,15 @@ nav a:hover{
     color: #6E6E6E;
 }
 
-.name{
+.container{
+    width: 22%;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #6e6e6e; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(100, end),
-    blink-caret 7.5s step-end infinite;
+    border-right: .10em solid #6e6e6e; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0em; /* Adjust as needed */
+    animation: typing 3.5s steps(100, end), blink-caret 7.5s step-end infinite;
+    display: inline-block;
 }
 
 /* The typing effect */
@@ -92,9 +92,9 @@ nav a:hover{
 }
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  25% { border-color: #6e6e6e; }
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: #6e6e6e; }
 }
 
 .description{
@@ -169,9 +169,6 @@ h1{
 
 img{
     height: 10em;
-    opacity: 1;
-    transition: opacity 2000ms ease-in-out
-    
 }
 
 .watermark{
@@ -179,4 +176,52 @@ img{
     height: 5em;
     opacity: 60%;
     border-radius: 100px;
+}
+
+.new_bar{
+    position: absolute;
+    text-align: left;
+    bottom: 100%;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    background: #BCFD4C;
+    width: 100%;
+    z-index: 1001;
+    
+}
+
+.new_bar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.new_bar li{
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+
+.new_bar a{
+    color: #6E6E6E;
+    text-decoration: none;
+    text-transform: uppercase;
+    bottom: 30px;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+.new_bar a:hover{
+    color: rgb(196, 165, 9);
+}
+
+.new-toggle:checked:checked ~ .new_bar{
+    transform: scale(1,1);
+
+}
+
+.new-toggle:checked ~ .new_bar a{
+    opacity: 1;
+    transition: opacity 150ms ease-in-out 250ms;
 }

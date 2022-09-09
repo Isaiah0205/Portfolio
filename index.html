@@ -6,53 +6,68 @@
     <title>Isaiah James Portfolio</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="images/initial logo.png" />
-    <script type = "text/javascript">
+    <script type="text/javascript">
       function displayNextImage() {
-          x = (x === images.length - 1) ? 0 : x + 1;
-          document.getElementById("img").src = images[x];
+        x = x === images.length - 1 ? 0 : x + 1;
+        document.getElementById("img").src = images[x];
       }
 
       function displayPreviousImage() {
-          x = (x <= 0) ? images.length - 1 : x - 1;
-          document.getElementById("img").src = images[x];
+        x = x <= 0 ? images.length - 1 : x - 1;
+        document.getElementById("img").src = images[x];
       }
 
       function startTimer() {
-          setInterval(displayNextImage, 1750);
+        setInterval(displayNextImage, 1750);
       }
 
-      var images = [], x = -1;
+      var images = [],
+        x = -1;
       images[0] = "images/HTML_logo.jpg";
       images[1] = "images/css_logo.png";
-      images[2] = "images/Python_logo_icon.png"
-  </script>
+      images[2] = "images/Python_logo_icon.png";
+    </script>
   </head>
-  <body onload = "startTimer()">
+  <body onload="startTimer()">
     <div class="first">
-      <h1 class="about_me"><a name="aboutme">About me</a></h1>
+      <h1 class="about_me">About me</h1>
       <p>Lorem ipsum dolor sit amet...</p>
     </div>
     <div class="second">
-      <h1 class="skills"><a name="myskills">My Skills</a></h1>
-      <img id="img" src="images/Python_logo_icon.png"/>
+      <h1 class="skills">My Skills</h1>
+      <img id="img" src="images/Python_logo_icon.png" />
     </div>
     <div class="third">
-      <h1 class="projects"><a name="myprojects">My Projects</a></h1>
+      <h1 class="projects">My Projects</h1>
       <p>Lorem ipsum dolor sit amet...</p>
     </div>
     <div class="bar">
+      <div class="container">
         <h1 class="name">Fullstack Developer</h1>
-        <p class="description">Open the navigation bar for a link to my contacts and resume.</p>
-        <input type="checkbox" id="toggle" class="toggle">
-        <nav>
-            <ul>
-                <li><a href="#">My Resume</a></li>
-                <li><a href="mycontacts">My Contacts</a></li>
-            </ul>
-        </nav>
-        <label for="toggle" class="toggle-label">
-            <span></span>
-        </label>
+      </div>
+      <p class="description">
+        Open the navigation bar for my contacts and resume.
+      </p>
+      <input type="checkbox" id="toggle" class="toggle" />
+      <nav class="old_bar">
+        <ul>
+          <li>
+            <span><a href="#">My Resume</a></span>
+          </li>
+          <label for="new-toggle" class="new-toggle-label">
+            <li><span>Contacts</span></li>
+          </label>
+        </ul>
+      </nav>
+      <nav class="new_bar">
+        <ul>
+          <li><a href="#">Linkedin</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </nav>
+      <label for="toggle" class="toggle-label">
+        <span></span>
+      </label>
     </div>
   </body>
 </html>
