@@ -29,43 +29,46 @@
       images[3] = "images/django-logo.png";
       images[4] = "images/java_logo_640.jpg"
       images[5] = "images/javascript_logo.png"
+      images[6] = "images/bootstrap_logo.png"
+      images[7] = "images/spring_logo.png"
+      images[8] = "images/git-logo.png"
     </script>
   </head>
   <body onload="startTimer()">
-    <div class="first">
+    <div class="first" id="first">
       <h1 class="about_me">About me</h1>
       <p>Lorem ipsum dolor sit amet...</p>
     </div>
-    <div class="second">
+    <div class="second" id="second">
       <h1 class="skills">My Skills</h1>
       <img id="img" src="images/Python_logo_icon.png" />
     </div>
-    <div class="third">
+    <div class="third" id="third">
       <h1 class="projects">My Projects</h1>
-      <p>Lorem ipsum dolor sit amet...</p>
+      <img class="monopoly" src="images/monopoly_logo.png"/>
+      <p>My version of <a href="https://replit.com/@IsaiahJames2/Unit-Project-Monopoly" target="_blank">Monopoly</a> in python.</p>
+    </div>
+    <div class="fourth" id="fourth">
+      <a href="#" target="_blank">
+        <img class="github-logo" src="images/GitHub_logo-removebg-preview.png">
+      </a>
+      <a href="#" target="_blank">
+        <img class="linkedin-logo" src="images/Linkedin_logo-removebg-preview.png">
+      </a>
     </div>
     <div class="bar">
       <div class="container">
         <h1 class="name">Fullstack Developer</h1>
       </div>
-      <p class="description">
-        Open the navigation bar for my contacts and resume.
-      </p>
       <input type="checkbox" id="toggle" class="toggle" />
       <nav class="old_bar">
         <ul>
-          <li>
-            <span><a href="#">My Resume</a></span>
-          </li>
-          <label for="new-toggle" class="new-toggle-label">
-            <li><span>Contacts</span></li>
-          </label>
-        </ul>
-      </nav>
-      <nav class="new_bar">
-        <ul>
-          <li><a href="#">Linkedin</a></li>
-          <li><a href="#">Email</a></li>
+          <li><a href="#first">about me</a></li>
+          <li><a href="#second">my skills</a></li>
+          <li><a href="#third">my projects</a></li>
+          <li><a href="Isaiah-James.pdf" download>my resume</a></li>
+          <li><a href="#fourth">my contacts</a></li>
+          <li><a href="mailto: idjames0205@gmail.com" target="_blank">email</a></li>
         </ul>
       </nav>
       <label for="toggle" class="toggle-label">
