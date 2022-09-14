@@ -1,215 +1,442 @@
-html, body{
-    background-color: #6E6E6E;
-    scroll-behavior: smooth;
+html,
+body {
+  background-color: #6e6e6e;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-.bar{
-  background-color: #BCFD4C;
+.bar {
+  background-color: #bcfd4c;
   position: fixed;
   text-align: center;
   width: 99%;
   z-index: 1000;
-  
 }
 
-.old_bar{
+.old_bar {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  background: #bcfd4c;
+  width: 100%;
+  z-index: 1000;
+}
+
+.old_bar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.old_bar li {
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+.old_bar a {
+  color: #6e6e6e;
+  text-decoration: none;
+  text-transform: uppercase;
+  bottom: 30px;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.old_bar a:hover {
+  color: rgb(196, 165, 9);
+}
+
+.toggle:checked ~ .old_bar {
+  transform: scale(1, 1);
+}
+.toggle:checked ~ .old_bar a {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out 250ms;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  margin-left: 0.5em;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #6e6e6e;
+}
+
+.container {
+  width: 22%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0em; /* Adjust as needed */
+  animation: typing 3.5s steps(100, end), blink-caret 7.5s step-end infinite;
+  display: inline-block;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 25%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #6e6e6e;
+  }
+}
+
+h1 {
+  color: #6e6e6e;
+}
+
+.toggle-label span,
+.toggle-label span::before,
+.toggle-label span::after {
+  display: block;
+  background: #6e6e6e;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.toggle-label span::before,
+.toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.toggle-label span::before {
+  bottom: 7px;
+}
+
+.toggle-label span::after {
+  top: 7px;
+}
+
+.first {
+  position: absolute;
+  margin-top: 17em;
+  margin-left: 12em;
+  background: #bcfd4c;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.second {
+  position: absolute;
+  margin-top: 34em;
+  margin-left: 12em;
+  background: #bcfd4c;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.third {
+  position: absolute;
+  margin-top: 60em;
+  margin-left: 12em;
+  background: #bcfd4c;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+}
+
+img {
+  height: 10em;
+}
+
+.watermark {
+  float: right;
+  height: 5em;
+  opacity: 60%;
+  border-radius: 100px;
+}
+
+.monopoly {
+  width: 400px;
+  height: 100px;
+}
+
+p {
+  color: #6e6e6e;
+}
+
+p a:hover {
+  color: rgb(196, 165, 9);
+}
+
+a {
+  color: #6e6e6e;
+}
+
+.fourth {
+  position: absolute;
+  margin-top: 86em;
+  margin-left: 12em;
+  background: #bcfd4c;
+  width: 70%;
+  text-align: center;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.github-logo {
+  margin-right: 150px;
+  height: 100px;
+}
+
+.linkedin-logo {
+  height: 100px;
+}
+
+@media only screen and (max-width: 450px){
+  .bar {
+    background-color: #bcfd4c;
+    position: fixed;
+    text-align: center;
+    width: 99%;
+    z-index: 1000;
+  }
+
+  .old_bar {
     position: absolute;
     text-align: left;
     top: 100%;
     left: 0;
-    transform: scale(1,0);
+    transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
-    background: #BCFD4C;
+    background: #bcfd4c;
     width: 100%;
     z-index: 1000;
-    
-}
+  }
 
-.old_bar ul{
+  .old_bar ul {
     margin: 0;
     padding: 0;
     list-style: none;
-}
+  }
 
-.old_bar li{
+  .old_bar li {
     margin-bottom: 0.5em;
     margin-left: 0.5em;
-}
+  }
 
-.old_bar a{
-    color: #6E6E6E;
+  .old_bar a {
+    color: #6e6e6e;
     text-decoration: none;
     text-transform: uppercase;
     bottom: 30px;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
-}
+  }
 
-.old_bar a:hover{
+  .old_bar a:hover {
     color: rgb(196, 165, 9);
-}
+  }
 
-.toggle:checked ~ .old_bar{
-    transform: scale(1,1);
-
-}
-.toggle:checked ~ .old_bar a{
+  .toggle:checked ~ .old_bar {
+    transform: scale(1, 1);
+  }
+  .toggle:checked ~ .old_bar a {
     opacity: 1;
     transition: opacity 150ms ease-in-out 250ms;
-}
+  }
 
-.toggle{
+  .toggle {
     display: none;
-    
-}
+  }
 
-.toggle-label{
+  .toggle-label {
     position: absolute;
-    margin-left: 0.5em;
     bottom: 0;
     left: 0;
     height: 100%;
     display: flex;
     align-items: center;
-    color: #6E6E6E;
-}
+    color: #6e6e6e;
+  }
 
-.container{
+  .container {
     width: 22%;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid #6e6e6e; /* The typwriter cursor */
+    border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 0em; /* Adjust as needed */
     animation: typing 3.5s steps(100, end), blink-caret 7.5s step-end infinite;
     display: inline-block;
-}
+  }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0% }
-  to { width: 25% }
-}
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 25%;
+    }
+  }
 
-/* The typewriter cursor effect */
-@keyframes blink {
-  from { border-color: transparent }
-  to { border-color: #6e6e6e; }
-}
+  /* The typewriter cursor effect */
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #6e6e6e;
+    }
+  }
 
-h1{
-    color: #6E6E6E;
-}
+  h1 {
+    color: #6e6e6e;
+  }
 
-.toggle-label span,
-.toggle-label span::before,
-.toggle-label span::after{
+  .toggle-label span,
+  .toggle-label span::before,
+  .toggle-label span::after {
     display: block;
-    background: #6E6E6E;
+    background: #6e6e6e;
     height: 2px;
     width: 2em;
     border-radius: 2px;
     position: relative;
-}
+  }
 
-.toggle-label span::before,
-.toggle-label span::after{
-    content: '';
+  .toggle-label span::before,
+  .toggle-label span::after {
+    content: "";
     position: absolute;
-}
+  }
 
-.toggle-label span::before{
+  .toggle-label span::before {
     bottom: 7px;
-}
+  }
 
-.toggle-label span::after{
+  .toggle-label span::after {
     top: 7px;
-}
+  }
 
-.first{
+  .first {
     position: absolute;
     margin-top: 17em;
-    background: #BCFD4C;
-    width: 45%;
+    margin-left: 6em;
+    background: #bcfd4c;
+    width: 100%;
     text-align: center;
     border-radius: 20px;
     border-color: black;
     border-style: solid;
     border-width: 5px;
-}
+  }
 
-.second{
+  .second {
     position: absolute;
     margin-top: 34em;
-    margin-left: 40em;
-    background: #BCFD4C;
-    width: 45%;
+    margin-left: 6em;
+    background: #bcfd4c;
+    width: 100%;
     text-align: center;
     border-radius: 20px;
     border-color: black;
     border-style: solid;
     border-width: 5px;
-}
+  }
 
-.third{
+  .third {
     position: absolute;
     margin-top: 60em;
-    background: #BCFD4C;
-    width: 45%;
+    margin-left: 6em;
+    background: #bcfd4c;
+    width: 100%;
     text-align: center;
     border-radius: 20px;
     border-color: black;
     border-style: solid;
     border-width: 5px;
-}
+  }
 
-img{
+  img {
     height: 10em;
-}
+  }
 
-.watermark{
+  .watermark {
     float: right;
     height: 5em;
     opacity: 60%;
     border-radius: 100px;
-}
+  }
 
-.monopoly{
-    width: 400px;
+  .monopoly {
+    width: 200px;
     height: 100px;
-}
+  }
 
-p{
-    color: #6E6E6E
-}
+  p {
+    color: #6e6e6e;
+  }
 
-p a:hover{
+  p a:hover {
     color: rgb(196, 165, 9);
-}
+  }
 
-a{
-    color: #6E6E6E
-}
+  a {
+    color: #6e6e6e;
+  }
 
-.fourth{
+  .fourth {
     position: absolute;
     margin-top: 86em;
-    margin-left: 40em;
-    background: #BCFD4C;
-    width: 45%;
+    margin-left: 6em;
+    background: #bcfd4c;
+    width: 100%;
     text-align: center;
     border-radius: 20px;
     border-color: black;
     border-style: solid;
     border-width: 5px;
-}
+  }
 
-.github-logo{
+  .github-logo {
     margin-right: 150px;
     height: 100px;
-}
+  }
 
-.linkedin-logo{
+  .linkedin-logo {
     height: 100px;
+  }
 }
