@@ -1,8 +1,6 @@
 html,
 body {
   background-color: #6e6e6e;
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
 }
 
@@ -18,18 +16,14 @@ body {
   position: absolute;
   text-align: left;
   top: 100%;
-  left: 0;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
   background: #bcfd4c;
-  width: 100%;
   z-index: 1000;
 }
 
 .old_bar ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -75,7 +69,7 @@ body {
 }
 
 .container {
-  width: 22%;
+  width: 29%;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -91,7 +85,7 @@ body {
     width: 0%;
   }
   to {
-    width: 25%;
+    width: 29%;
   }
 }
 
@@ -177,13 +171,6 @@ img {
   height: 10em;
 }
 
-.watermark {
-  float: right;
-  height: 5em;
-  opacity: 60%;
-  border-radius: 100px;
-}
-
 .monopoly {
   width: 400px;
   height: 100px;
@@ -223,6 +210,22 @@ a {
   height: 100px;
 }
 
+.name{
+    font-family: "Roboto Mono";
+}
+
+.skills{
+    font-family: "Roboto Mono";
+}
+
+.about_me{
+    font-family: "Roboto Mono";
+}
+
+.projects{
+    font-family: "Roboto Mono";
+}
+
 @media only screen and (max-width: 450px){
   .bar {
     background-color: #bcfd4c;
@@ -241,13 +244,10 @@ a {
     transform-origin: top;
     transition: transform 400ms ease-in-out;
     background: #bcfd4c;
-    width: 100%;
     z-index: 1000;
   }
 
   .old_bar ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
   }
 
@@ -292,7 +292,7 @@ a {
   }
 
   .container {
-    width: 53%;
+    width: 100%;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -308,7 +308,7 @@ a {
       width: 0%;
     }
     to {
-      width: 53%;
+      width: 100%;
     }
   }
 
@@ -366,7 +366,7 @@ a {
 
   .second {
     position: absolute;
-    margin-top: 34em;
+    margin-top: 36em;
     margin-left: 6em;
     background: #bcfd4c;
     width: 100%;
@@ -392,13 +392,6 @@ a {
 
   img {
     height: 10em;
-  }
-
-  .watermark {
-    float: right;
-    height: 5em;
-    opacity: 60%;
-    border-radius: 100px;
   }
 
   .monopoly {
@@ -439,4 +432,90 @@ a {
   .linkedin-logo {
     height: 100px;
   }
+}
+
+@media only screen and (max-width: 920px){
+
+    .first {
+        position: absolute;
+        margin-top: 17em;
+        margin-left: 6em;
+        background: #bcfd4c;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        border-color: black;
+        border-style: solid;
+        border-width: 5px;
+      }
+    
+      .second {
+        position: absolute;
+        margin-top: 36em;
+        margin-left: 6em;
+        background: #bcfd4c;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        border-color: black;
+        border-style: solid;
+        border-width: 5px;
+      }
+    
+      .third {
+        position: absolute;
+        margin-top: 60em;
+        margin-left: 6em;
+        background: #bcfd4c;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        border-color: black;
+        border-style: solid;
+        border-width: 5px;
+      }
+    
+    .fourth {
+        position: absolute;
+        margin-top: 86em;
+        margin-left: 6em;
+        background: #bcfd4c;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        border-color: black;
+        border-style: solid;
+        border-width: 5px;
+      }
+      
+    .container {
+        width: 100%;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0em; /* Adjust as needed */
+        animation: typing 3.5s steps(100, end), blink-caret 7.5s step-end infinite;
+        display: inline-block;
+      }
+    
+      /* The typing effect */
+    @keyframes typing {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    
+      /* The typewriter cursor effect */
+    @keyframes blink {
+        from {
+          border-color: transparent;
+        }
+        to {
+          border-color: #6e6e6e;
+        }
+      }
 }
