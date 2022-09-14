@@ -292,7 +292,7 @@ a {
   }
 
   .container {
-    width: 22%;
+    width: 53%;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -308,7 +308,7 @@ a {
       width: 0%;
     }
     to {
-      width: 25%;
+      width: 53%;
     }
   }
 
