@@ -206,6 +206,12 @@ p {
   color: #6e6e6e;
 }
 
+.introduction {
+    font-size: 1.2em;
+}
+
+
+
 p a:hover {
   color: rgb(196, 165, 9);
 }
@@ -436,6 +442,10 @@ h1{
   .monopoly {
     width: 200px;
     height: 100px;
+  }
+
+  .m_description {
+    font-size: 1.2em;
   }
 
   p {
