@@ -4,6 +4,14 @@ body {
   scroll-behavior: smooth;
 }
 
+.dummy_div {
+    position: absolute;
+    left: 580px;
+    top: 30px;
+    height: 100px;
+    width: 100px;
+}
+
 .bar {
   background-color: #bcfd4c;
   position: fixed;
@@ -254,7 +262,7 @@ h1{
     margin-left: 150px;
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (min-width: 281px) and (max-width: 450px){
     .first {
         position: absolute;
         margin-top: 17em;
@@ -349,7 +357,7 @@ h1{
       }
 }
 
-@media only screen and (max-width: 920px){
+@media only screen and (min-width: 451px) and (max-width: 920px){
     .first {
         position: absolute;
         margin-top: 17em;
