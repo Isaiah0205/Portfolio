@@ -34,6 +34,7 @@ body {
   background: #bcfd4c;
   z-index: 1000;
   border-radius: 20px;
+  width: 215px;
 }
 
 .old_bar li {
