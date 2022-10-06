@@ -73,7 +73,7 @@ body {
   position: absolute;
   margin-left: 0.5em;
   bottom: 0;
-  left: 0;
+  left: 45px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@ body {
 }
 
 .container {
-  width: 26.5%;
+  width: 29%;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.1em solid #6e6e6e; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -89,6 +89,7 @@ body {
   letter-spacing: 0em; /* Adjust as needed */
   animation: typing 3.5s steps(100, end), blink-caret 7.5s step-end infinite;
   display: inline-block;
+  animation-iteration-count: infinite;
 }
 
 /* The typing effect */
@@ -97,7 +98,7 @@ body {
     width: 0%;
   }
   to {
-    width: 26.5%;
+    width: 29%;
   }
 }
 
@@ -118,6 +119,11 @@ h1 {
 h2 {
     color:#6e6e6e;
 }
+
+.toggle-label span{
+  left: 25px;
+}
+
 
 .toggle-label span,
 .toggle-label span::before,
